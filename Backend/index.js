@@ -12,6 +12,7 @@ import protect from './middleware/authMiddleware.js';
 import ForoRoutes from "./routes/ForoRoutes.js";
 import riegoRoutes from './controllers/riegoController.js';
 import plagaRoutes from "./routes/plagaRoutes.js";
+import productRoutes from './routes/productRoutes.js';
 
 
 
@@ -62,7 +63,7 @@ app.use('/api/weather', weatherRoutes);
 app.use("/api/foro", ForoRoutes);
 app.use('/api/calendario-riego', riegoRoutes);
 app.use("/api/Plagas", plagaRoutes);
-
+app.use('/api/products', productRoutes);
 
 // Rutas protegidas
 app.use('/api/crops', protect, cropRoutes);
